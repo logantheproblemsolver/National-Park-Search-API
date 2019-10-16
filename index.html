@@ -4,11 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Project Title</title>
+    <title>National Park Search</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+    <h1>The National Park Search</h1>
+    <h2>Enter the park of your choice, and the relevant info!</h2>
+
+    <form> 
+        <fieldset>
+            <input type="text" class="parkInput" id="parkInput" placeholder="National Park">
+            <input type="number" class="parkInput" id="limit" default="10" placeholder="10">
+            <input type="submit"class="parkInput" id="submitPark">
+        </fieldset>
+    </form>
+
+    <section class="results hidden">
+        <ul class="resultsList">
+
+        </ul>
+    </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>

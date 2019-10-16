@@ -1,3 +1,20 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    text-align: center; 
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.resultsList {
+    list-style: none;
+}
