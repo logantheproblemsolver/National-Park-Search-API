@@ -5,8 +5,9 @@ let searchURL = 'https://developer.nps.gov/api/v1/parks'
 function pressSubmit() {
     $('#submitPark').on('click', function(s) {
         s.preventDefault();
-        let search = $('#submitPark').val();
+        let search = $('#parkInput').val();
         getNationalParks(search);
+        $('.resultsList').empty();
     })
 }
 
@@ -48,7 +49,6 @@ function getNationalParks(search) {
 
 
 function displayParks(responseJson) {
-    console.log('displayParks ran!')
     console.log(responseJson)
     $('.results').removeClass('hidden');
      for (let i=0; i < responseJson.data.length; i++) {
