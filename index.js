@@ -7,7 +7,9 @@ function pressSubmit() {
         s.preventDefault();
         let search = $('#parkInput').val();
         let parkState = $('#states').val();
-        getNationalParks(search, parkState);
+        let parkStates = parkState.replace(/\s+/g, '');
+        console.log(parkStates)
+        getNationalParks(search, parkStates);
         $('.resultsList').empty();
     })
 }
@@ -21,13 +23,13 @@ function formatQueryParams(params) {
 
 
 
-function getNationalParks(search, parkState) {
+function getNationalParks(search, parkStates) {
     let limits = $('#limit').val();
     const params = {
         limit: limits != "" ? limits : 10,
         q: search,
         api_key: api_key,
-        stateCode: parkState
+        stateCode: parkStates
     };
 
 
